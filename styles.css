@@ -86,9 +86,12 @@ button {
   height: 44px;
   line-height: 1.5;
   font-family: SF Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial, sans-serif;
-  margin-down: 1.5rem;
 }
 
+.nav-item2 {
+  margin-left: auto;
+  margin-right: auto;
+}
 .nav-link:hover {
   opacity: 1;
 }
@@ -131,14 +134,14 @@ button {
 .mobile-menu-button {
   display: none;
   font-size: 20px;
-  width: 20px;
+  width: 80px;
   background: none;
   border: none;
   display: none;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
-  margin-top: 3px;
+  margin-top: 6px;
 }
 
 .mobile-menu-button span,
@@ -190,6 +193,14 @@ button {
 
   .mobile-menu-button {
     display: flex;
+  }
+
+  .nav-item2{
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-search-margin{
+    margin-left: 70%;
   }
 }
 
@@ -1144,6 +1155,12 @@ hr {
   #image-frontback {
     height: auto; 
     width: auto;
+  }
+  .nav-search-margin{
+    margin-left: 70%;
+  }
+  .mobile-menu-button {
+    margin-left: auto;
   }
 }
 
