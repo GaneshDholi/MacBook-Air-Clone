@@ -1128,6 +1128,7 @@ hr {
   }
   .description {
     margin: 0 0 0 13%;
+    line-height: auto;
   }
   .sizes-text {
     width: 70%
@@ -1184,6 +1185,7 @@ hr {
   }
   .description {
     margin: 0 0 0 1%;
+    line-height: auto;
   }
   .last-second-text {
     max-width: 100%;
