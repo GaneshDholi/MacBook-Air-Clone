@@ -412,10 +412,10 @@ button {
 }
 
 .laptop-section {
-    width: 100%;
     overflow: hidden;
     position: relative;
     height: 100vh; 
+    padding: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -424,6 +424,7 @@ button {
   .laptop-images {
     width: 100%;
     height: 100%;
+    max-width: 1200px;
     overflow: hidden;
     position: relative;
   }
@@ -431,6 +432,9 @@ button {
   .laptop-img {
     width: 100%;
     height: 100%;
+    max-width: 1200px;
+    border: none;
+    outline: none;
     object-fit: cover; /* Fills the box */
     display: block;
   }
@@ -1162,6 +1166,9 @@ hr {
   .mobile-menu-button {
     margin-left: auto;
   }
+  .laptop-images {
+    height: 75%;
+  }
 }
 
 @media screen and (max-width: 734px) {
@@ -1200,6 +1207,12 @@ hr {
     flex-wrap: wrap;
     margin-top: 10px;
   }
+  .laptop-section {
+    height: auto;
+  }
+  .laptop-images {
+    height: auto;
+}
 }
 
 @media screen and (max-width: 375px) {

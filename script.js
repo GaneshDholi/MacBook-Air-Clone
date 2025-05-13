@@ -1,12 +1,57 @@
-const video = document.querySelector(".hero__bg");
-const heroContent = document.querySelector(".hero-content");
+function loadResponsiveVideo() {
+  const video = document.getElementById("laptopVideo");
+  const screenWidth = window.innerWidth;
+  let videoUrl = "";
+
+  if (screenWidth <= 734) {
+    videoUrl = "https://www.apple.com/105/media/ww/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/anim/design-hero/small.mp4";
+  } else if (screenWidth <= 1068) {
+    videoUrl = "https://www.apple.com/105/media/ww/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/anim/design-hero/medium.mp4";
+  } else {
+    videoUrl = "https://www.apple.com/105/media/ww/macbook-air/2025/0833fe28-c438-4dc4-8edc-e39ef30df5f9/anim/design-hero/large.mp4";
+  }
+
+  if (video) {
+    // Remove old sources
+    while (video.firstChild) {
+      video.removeChild(video.firstChild);
+    }
+
+    // Create and add new source
+    const source = document.createElement("source");
+    source.src = videoUrl;
+    source.type = "video/mp4";
+    video.appendChild(source);
+    
+    // Load and attempt autoplay
+    video.load();
+    video.play().catch(err => {
+      console.warn("Autoplay might be blocked by the browser:", err);
+    });
+  }
+}
 
 window.addEventListener("load", () => {
+  const heroContent = document.querySelector(".hero-content");
+  const laptopSection = document.querySelector(".laptop-section");
+
+  // Show content after delay
   setTimeout(() => {
     document.querySelector(".hero-section").classList.add("active");
     heroContent.classList.add("active");
-  }, 1000); 
+    laptopSection.classList.add("active");
+  }, 1000);
+
+  loadResponsiveVideo();
 });
+
+// Optional: Update video source on resize without reload
+window.addEventListener("resize", () => {
+  loadResponsiveVideo();
+});
+
+
+
 
 const colorButtons = document.querySelectorAll('.color-btn');
   const colorLabel = document.querySelector('.color-label');
@@ -138,3 +183,4 @@ document.addEventListener('DOMContentLoaded', function () {
     navList.classList.toggle('active');
   });
 });
+
