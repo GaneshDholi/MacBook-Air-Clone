@@ -352,6 +352,7 @@ button {
   max-width: 930px;
   margin: 0 auto;
   color: #666;
+  text-align: justify;
   line-height: 1.6;
   font-size: 26px;
   font-weight: 600;
@@ -429,6 +430,11 @@ button {
     position: relative;
   }
 
+  .laptop-images2 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .laptop-img {
     width: 100%;
     height: 100%;
@@ -453,6 +459,7 @@ button {
     padding-top: 50px;
     padding-bottom: 50px;    
     text-align: center;
+    text-align: justify;
     font-size: 24px;
     color: #86868b;
     line-height: 1.1666666667;
@@ -1220,5 +1227,48 @@ hr {
   .hero-section .hero__bg {
     margin-left: -270px;
     margin-top: 50px;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .info-section {
+    padding: 40px 400px;
+  }
+  hr {
+    margin: 30px 15% 30px 26%;
+  }
+  .last-second-text {
+    max-width: 1000px;
+    margin-left: 26%;
+    text-align: justify;
+  }
+  .laptop-images2 {
+    margin-left: 25%;
+  }
+  .design-content {
+    margin: 80px 0 40px 25%;
+  }
+  .description {
+    margin: 0 0 0 29%;
+  }
+  .laptop-description3 {
+    margin: 0 auto 0 29%;
+  }
+  .carousel {
+    max-width: 900px;
+  }
+  .sizes-text {
+    width: 35%;
+  }
+  .laptop-images1 {
+    width: 100%;
+    margin-left: 8%;
+  }
+  .nav-item2 {
+    margin-left: 0;
+    margin-right: 1.5%;
+  }
+  .apple-main {
+    margin-left: 24%;
   }
 }
