@@ -1221,6 +1221,9 @@ hr {
   .laptop-images {
     height: auto;
 }
+  .info-section{
+    padding: 20px 0;
+  }
 }
 
 @media screen and (max-width: 375px) {
