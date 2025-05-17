@@ -25,11 +25,41 @@ function loadResponsiveVideo() {
     
     // Load and attempt autoplay
     video.load();
-    video.play().catch(err => {
-      console.warn("Autoplay might be blocked by the browser:", err);
-    });
   }
 }
+
+function observeVideoPlayback() {
+  const video = document.getElementById("laptopVideo");
+
+  if (video) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            video.play().catch((err) => {
+              console.warn("Autoplay might be blocked by the browser:", err);
+            });
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 } // Play when 50% of the video is visible
+    );
+
+    observer.observe(video);
+  }
+}
+
+// Call the function on page load and resize
+window.addEventListener("load", () => {
+  loadResponsiveVideo();
+  observeVideoPlayback();
+});
+
+window.addEventListener("resize", () => {
+  loadResponsiveVideo();
+});
 
 window.addEventListener("load", () => {
   const heroContent = document.querySelector(".hero-content");
