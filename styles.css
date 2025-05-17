@@ -96,7 +96,8 @@ button {
   opacity: 1;
 }
 .apple-main {
-  margin-left: 200px;
+  margin-left: 100px;
+  margin-right: 30px;
 }
 
 .apple-logo {
@@ -170,7 +171,7 @@ button {
   content: "";
   left: 0;
 }
-@media (max-width: 1409px) {
+@media (max-width: 1365px) {
   .nav-list {
     display: none;
     position: absolute;
